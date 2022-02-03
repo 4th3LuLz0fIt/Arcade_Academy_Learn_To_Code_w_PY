@@ -60,6 +60,7 @@ arcade.draw_line(500, 550, 550, 500, arcade.color.YELLOW_ROSE, 3)
 arcade.draw_line(500, 550, 450, 600, arcade.color.YELLOW_ROSE, 3)
 arcade.draw_line(500, 550, 450, 500, arcade.color.YELLOW_ROSE, 3)
 
+# Draw the Sun
 # Drawing Text to the window
 # Draw text at (150, 230) with a font size of 24 pts.
 arcade.draw_text("Drawing Shapes and Filling color.",
