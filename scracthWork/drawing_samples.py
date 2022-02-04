@@ -80,6 +80,7 @@ arcade.draw_arc_outline(400,
                         180,
                         3,
                         45)
+
 # Specify parameter by name
 arcade.draw_arc_outline(center_x=400,
                         center_y=445,
