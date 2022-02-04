@@ -5,7 +5,7 @@
 import arcade
 
 # Create a window for drawing
-# from arcade libabry use function open_window
+# from arcade library use function open_window
 # open_window takes three parameters
 # height and width integers and TITLE of the window as a string
 
@@ -32,8 +32,8 @@ arcade.draw_rectangle_filled(100, 320, 20, 60, arcade.csscolor.SIENNA)
 # Draw circle for tree leaves
 arcade.draw_circle_filled(100, 350, 30, arcade.csscolor.GREEN)
 # Draw Eclipse
-#arcade.draw_rectangle_outline(300, 300, 350, 200, arcade.csscolor.BLACK, 3)
-#arcade.draw_ellipse_outline(300, 300, 350, 200, arcade.csscolor.RED, 3)
+# arcade.draw_rectangle_outline(300, 300, 350, 200, arcade.csscolor.BLACK, 3)
+# arcade.draw_ellipse_outline(300, 300, 350, 200, arcade.csscolor.RED, 3)
 
 # Ellipse Tree
 arcade.draw_rectangle_filled(200, 320, 20, 60, arcade.csscolor.SIENNA)
@@ -47,12 +47,13 @@ arcade.draw_rectangle_filled(400, 320, 20, 40, arcade.csscolor.SIENNA)
 arcade.draw_triangle_filled(400, 400, 370, 320, 430, 320, arcade.csscolor.GREEN)
 
 # Draw a sun
-arcade.draw_circle_filled(500, 550, 40, arcade.color.YELLOW_ROSE)
+arcade.draw_circle_filled(500, 550, 40, arcade.color.YELLOW_ROSE, )
+
 # Rays to left, right , up, and down
 arcade.draw_line(500, 550, 400, 550, arcade.color.YELLOW_ROSE, 3)
 arcade.draw_line(500, 550, 600, 550, arcade.color.YELLOW_ROSE, 3)
-arcade.draw_line(500, 550, 500, 450, arcade.color.YELLOW_ROSE, 3)
-arcade.draw_line(500, 550, 500, 650, arcade.color.YELLOW_ROSE, 3)
+arcade.draw_line(500, 550, 500, 450, arcade.color.YELLOW_ROSE, 5)
+arcade.draw_line(500, 550, 500, 650, arcade.color.YELLOW_ROSE, 5)
 
 # Diagonal rays
 arcade.draw_line(500, 550, 550, 600, arcade.color.YELLOW_ROSE, 3)
@@ -60,7 +61,6 @@ arcade.draw_line(500, 550, 550, 500, arcade.color.YELLOW_ROSE, 3)
 arcade.draw_line(500, 550, 450, 600, arcade.color.YELLOW_ROSE, 3)
 arcade.draw_line(500, 550, 450, 500, arcade.color.YELLOW_ROSE, 3)
 
-# Draw the Sun
 # Drawing Text to the window
 # Draw text at (150, 230) with a font size of 24 pts.
 arcade.draw_text("Drawing Shapes and Filling color.",
@@ -69,6 +69,27 @@ arcade.draw_text("Drawing Shapes and Filling color.",
                  20,
 
                  )
+
+# Specify parameters by number
+arcade.draw_arc_outline(400,
+                        440,
+                        60,
+                        100,
+                        arcade.csscolor.BLACK,
+                        0,
+                        180,
+                        3,
+                        45)
+# Specify parameter by name
+arcade.draw_arc_outline(center_x=400,
+                        center_y=445,
+                        width=60,
+                        height=100,
+                        color=arcade.csscolor.RED,
+                        start_angle=0,
+                        end_angle=190,
+                        border_width=3,
+                        tilt_angle=190)
 # To end
 arcade.finish_render()
 # From the arcade library use run command
