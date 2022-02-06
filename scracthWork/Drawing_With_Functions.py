@@ -34,22 +34,33 @@ def draw_snow_person(x, y):
     arcade.draw_circle_filled(x + 15, 210 + y, 5, arcade.color.BLACK)
 
 
+def on_draw(delt_time):
+    """ Draw everything """
+    arcade.start_render()
+
+    draw_grass()
+    draw_snow_person(on_draw.snow_person1_x, 140)
+    draw_snow_person(450, 180)
+
+    # Add one to the x value, making the snow person move right
+    # Negative numbers move left. Larger numbers move faster.
+    on_draw.snow_person1_x += 1
+
+
+# Create a value that our on_draw.snow_person1_x will start at
+on_draw.snow_person1_x = 150
+
+
 def main():
     # Convert to main() function
 
     arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, "Drawing with Functions")
     arcade.set_background_color(arcade.color.DARK_BLUE)
-    arcade.start_render()
 
-    draw_grass()
-    draw_snow_person(150, 140)
-    draw_snow_person(450, 180)
-
-    # Finish and run
-    arcade.finish_render()
+    # Call on every object 60th of a second
+    arcade.schedule(on_draw, 1 / 60)
     arcade.run()
 
 
 # Calls def main(): to start the program
-
 main()
